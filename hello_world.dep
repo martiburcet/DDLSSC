@@ -1,0 +1,9 @@
+$O/mesh.o: ../Sources/mesh.f90 \
+  $O/data_desc.o
+$O/data_desc.o: ../Sources/data_desc.f90
+$O/hello_world.o: ../Sources/hello_world.f90 \
+  $O/mesh.o \
+  $O/data_desc.o
+
+# include files dependencies
+

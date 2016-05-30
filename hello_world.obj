@@ -1,0 +1,14 @@
+SOURCE_DIRS= \
+:../Sources\
+:../Sources
+
+INC_DIRS=
+
+OFILES= \
+ $O/mesh.o \
+ $O/data_desc.o \
+ $O/hello_world.o
+
+MODULES= \
+ $O/data_desc_class.mod  \
+ $O/mesh_class.mod 

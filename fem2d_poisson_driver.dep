@@ -1,0 +1,34 @@
+$O/precond.o: ../Sources/precond.f90 \
+  $O/vector.o \
+  $O/data_desc.o \
+  $O/matrix.o
+$O/mesh.o: ../Sources/mesh.f90 \
+  $O/data_desc.o
+$O/vector.o: ../Sources/vector.f90 \
+  $O/data_desc.o
+$O/data_desc.o: ../Sources/data_desc.f90
+$O/fem2d_poisson_driver.o: ../Sources/fem2d_poisson_driver.f90 \
+  $O/mesh.o \
+  $O/data_desc.o \
+  $O/timer.o \
+  $O/fem_assembly.o \
+  $O/solver.o
+$O/timer.o: ../Sources/timer.f90
+$O/matrix.o: ../Sources/matrix.f90 \
+  $O/data_desc.o
+$O/matrix_vector.o: ../Sources/matrix_vector.f90 \
+  $O/vector.o \
+  $O/matrix.o
+$O/fem_assembly.o: ../Sources/fem_assembly.f90 \
+  $O/mesh.o \
+  $O/vector.o \
+  $O/matrix.o
+$O/solver.o: ../Sources/solver.f90 \
+  $O/precond.o \
+  $O/mesh.o \
+  $O/vector.o \
+  $O/matrix.o \
+  $O/matrix_vector.o
+
+# include files dependencies
+
